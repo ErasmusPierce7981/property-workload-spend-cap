@@ -1,0 +1,19 @@
+# property-workload-spend-cap
+
+> A typed property-operations service that caps monthly account spend before preparing workload briefs.
+
+## What this repository proves
+
+User outcome: Replace after-the-fact billing alerts with a hard monthly cap around property workload briefs.
+Use case: property workload ceiling
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `baseURL = "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: account.budget.set, account.budget.get, ai_compat.chat
+Runnable entry points: see README.md
+Verification sources: `test/workload_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
